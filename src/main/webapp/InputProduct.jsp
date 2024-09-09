@@ -8,7 +8,6 @@
 </head>
 <body>
 	<%
-
 	String name = (String) request.getAttribute("Name");
 	String price = (String) request.getAttribute("Price");
 	String category = (String) request.getAttribute("category");
@@ -23,18 +22,6 @@
 		<br> <input type="submit" value="Save Product">
 	</form>
 	<br>
-	<h2>Show Result Set</h2>
-	<form action="ListProductServlet">
-		<input type="submit" value="Show Result Set">
-	</form>
-	<br><br>
-	<h2>Search Category</h2>
-	<form action="InputSearch.jsp">
-		<input type="submit" value="Search Category">
-	</form>
-	<h2>Delete Product</h2>
-	<form action="deleteItem.jsp">
-		<input type="submit" value="Delete Item">
-	</form> 
+	<%@include file="Header.jsp"%>
 </body>
 </html>

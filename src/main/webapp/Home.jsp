@@ -7,10 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="SearchServlet" method="post">
-			Category: <input type="text" name="category">
-			<input type="submit">
-	</form>
-	<%@include file="Header.jsp"%>
+<%@include file="Header2.jsp"%>
+<a href="faq.jsp">FAQ</a>|
+<a href="contactUs.jsp">Contact Us</a>
+<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>
