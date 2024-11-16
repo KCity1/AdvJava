@@ -8,14 +8,17 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-@WebServlet("/InputCookieServlet")
-public class InputCookieServlet extends HttpServlet{
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String name = request.getParameter("name");
-		System.out.println(name);
-		Cookie c = new Cookie("firstName",name);
+@WebServlet("/LogoutServlet")
+public class LogoutServlet extends HttpServlet {
+
+	public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		Cookie c = new Cookie("firstName", "");
+		c.setMaxAge(0);
 		response.addCookie(c);
+		HttpSession session = request.getSession();
+		session.invalidate();
 		response.sendRedirect("inputCookie.jsp");
 	}
 }

@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@ page session="false" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,11 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="InputCookieServlet" method="post">
-		First Name : <input type="text" name="name"> <br>
-		 <input type="submit">
-	</form>
-	<br><br>
-	<a href="ViewCookie.jsp">View Cookie</a>
+	<a href="InputSessionTImeout.jsp">Set Session Time</a> ||
+	<a href="COrder.jsp">Order</a> ||
+	<a href="CHome.jsp">Home</a> ||
+	<a href="cLogin.jsp">Login</a>
 </body>
 </html>

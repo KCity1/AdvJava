@@ -9,13 +9,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/InputCookieServlet")
-public class InputCookieServlet extends HttpServlet{
+@WebServlet("/CLoginServlet")
+public class CLoginServlet extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String name = request.getParameter("name");
-		System.out.println(name);
-		Cookie c = new Cookie("firstName",name);
-		response.addCookie(c);
-		response.sendRedirect("inputCookie.jsp");
+		String email = request.getParameter("Email");
+		String password = request.getParameter("password");
+		Cookie cemail = new Cookie("Email", email);
+		Cookie cpassword = new Cookie("Password",password);
+		response.addCookie(cpassword);
+		response.addCookie(cemail);
+		response.sendRedirect("CChoic.jsp");
 	}
 }
